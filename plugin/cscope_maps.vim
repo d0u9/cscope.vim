@@ -8,18 +8,35 @@ if has("cscope")
     set csto=0
 
     " add any cscope database in current directory
-    if filereadable("cscope.out")
-        cs add cscope.out  
-    " else add the database pointed to by environment variable 
-    elseif $CSCOPE_DB != ""
+    if !exists("g:cscope_max_depth")
+        let g:cscope_max_depth = 6
+    endif
+
+    if !exists("g:cscope_quickfix") || g:cscope_quickfix != 0
+        :set cscopequickfix=s-,c-,d-,i-,t-,e-
+    endif
+
+
+    if $CSCOPE_DB != ""
         cs add $CSCOPE_DB
+    else
+        let cscope_file = "cscope.out"
+        let g:cscope_i = 0
+
+        while g:cscope_i < g:cscope_max_depth
+            if filereadable(cscope_file)
+                :execute "cs add " . cscope_file
+                break
+            else
+                let cscope_file = "../" . cscope_file
+                let g:cscope_i += 1
+            endif
+        endwhile
+
     endif
 
     " show msg when any other cscope db added
     set cscopeverbose
-
-
-
 
 endif
 
