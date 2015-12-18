@@ -1,3 +1,8 @@
+" @author: d0u9
+" set tabstop=4
+" set shiftwidth=4
+" set expandtab
+
 if has("cscope")
 
     " use both cscope and ctag for 'ctrl-]', ':ta', and 'vim -t'
