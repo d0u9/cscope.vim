@@ -70,6 +70,6 @@ if has("cscope")
     nmap <C-\><C-\>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>	
     nmap <C-\><C-\>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
 
-    nmap <C-k>a :cs find 
+    nmap <C-/>a :cs find 
 endif
 
