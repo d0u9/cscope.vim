@@ -43,14 +43,14 @@ if has("cscope")
     " show msg when any other cscope db added
     set cscopeverbose
 
-    nmap <C-k>s :cs find s <C-R>=expand("<cword>")<CR><CR>	
-    nmap <C-k>g :cs find g <C-R>=expand("<cword>")<CR><CR>	
-    nmap <C-k>c :cs find c <C-R>=expand("<cword>")<CR><CR>	
-    nmap <C-k>t :cs find t <C-R>=expand("<cword>")<CR><CR>	
-    nmap <C-k>e :cs find e <C-R>=expand("<cword>")<CR><CR>	
-    nmap <C-k>f :cs find f <C-R>=expand("<cfile>")<CR><CR>	
-    nmap <C-k>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-    nmap <C-k>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-/>s :cs find s <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-/>g :cs find g <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-/>c :cs find c <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-/>t :cs find t <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-/>e :cs find e <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-/>f :cs find f <C-R>=expand("<cfile>")<CR><CR>	
+    nmap <C-/>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    nmap <C-/>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
     nmap <C-\>s :scs find s <C-R>=expand("<cword>")<CR><CR>	
     nmap <C-\>g :scs find g <C-R>=expand("<cword>")<CR><CR>	
